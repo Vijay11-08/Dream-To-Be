@@ -151,8 +151,37 @@ img {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 1px 20px rgba(105,81,61,0.06);
-  padding: 12px 0;
+  padding: 6px 0;
   transition: all 0.3s ease;
+}
+
+/* Logo sizing — PNG has white padding so we compensate with larger display height */
+.navbar-brand .clinic-logo {
+  height: 72px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.navbar-custom.scrolled .clinic-logo {
+  height: 60px;
+}
+
+/* Footer logo — shown in a subtle pill so white-bg PNG is visible on dark footer */
+.footer-logo-wrap {
+  display: inline-block;
+  background: rgba(255,255,255,0.10);
+  border-radius: 14px;
+  padding: 10px 20px;
+  margin-bottom: 16px;
+}
+
+.footer-logo-wrap img {
+  height: 68px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .navbar-custom.scrolled {
