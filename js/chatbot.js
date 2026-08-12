@@ -99,11 +99,11 @@ function createChatbotUI() {
     
     chatContainer.innerHTML = `
         <div id="chatbot-header">
-            <span><i class="fa-solid fa-headset me-2"></i> Glow Assistant</span>
+            <span><i class="fa-solid fa-headset me-2"></i> Relief Assistant</span>
             <button id="chatbot-close"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div id="chatbot-messages">
-            <div class="bot-message">Hello! Welcome to Glow Skincare. How can I assist you today?</div>
+            <div class="bot-message">Hello! Welcome to Relief Skin & Cosmetic Clinic. How can I assist you today?</div>
             <div class="bot-message">Please select an option:</div>
         </div>
         <div id="chatbot-options">
@@ -127,10 +127,10 @@ function createChatbotUI() {
 
     const fabContainer = document.createElement('div');
     fabContainer.id = 'fab-container';
-    const waMessage = encodeURIComponent("Hello Glow Skincare! 🌿 I was browsing your website and would love to get more information about your treatments. Can you help me?");
+    const waMessage = encodeURIComponent("Hello Relief Skin & Cosmetic Clinic! 🌿 I was browsing your website and would love to get more information about your treatments. Can you help me?");
     fabContainer.innerHTML = `
-        <a href="tel:8320852144" class="fab-btn fab-call" title="Call Us"><i class="fa-solid fa-phone"></i></a>
-        <a href="https://wa.me/918320852144?text=${waMessage}" class="fab-btn fab-whatsapp" target="_blank" title="WhatsApp Us"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="tel:9998398310" class="fab-btn fab-call" title="Call Us"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://wa.me/919998398310?text=${waMessage}" class="fab-btn fab-whatsapp" target="_blank" title="WhatsApp Us"><i class="fa-brands fa-whatsapp"></i></a>
     `;
     document.body.appendChild(fabContainer);
 
@@ -180,12 +180,12 @@ function handleAction(action, text) {
     setTimeout(() => {
         if (action === 'whatsapp') {
             addMessage("Connecting you to our WhatsApp...");
-            const waMessage = encodeURIComponent("Hello Glow Skincare! 🌿 I am reaching out from your website and would like to ask a few questions.");
-            window.open(`https://wa.me/918320852144?text=${waMessage}`, '_blank');
+            const waMessage = encodeURIComponent("Hello Relief Skin & Cosmetic Clinic! 🌿 I am reaching out from your website and would like to ask a few questions.");
+            window.open(`https://wa.me/919998398310?text=${waMessage}`, '_blank');
             showInitialOptions();
         } else if (action === 'call') {
             addMessage("Opening your dial pad...");
-            window.location.href = 'tel:8320852144';
+            window.location.href = 'tel:9998398310';
             showInitialOptions();
         } else if (action === 'appointment') {
             addMessage("Redirecting you to our booking page...");
