@@ -1495,31 +1495,57 @@ img {
 }
 
 .fab-btn {
-  width: 55px;
-  height: 55px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  color: white;
+  color: var(--relief-white);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  font-size: 1.45rem;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.fab-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fab-btn:hover::after {
+  opacity: 1;
 }
 
 .fab-btn:hover {
-  transform: scale(1.1) translateY(-3px);
-  color: white;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+  transform: scale(1.12) translateY(-4px);
+  color: var(--relief-white);
 }
 
+/* WhatsApp — themed to the Relief warm palette */
 .fab-whatsapp {
-  background-color:#9C7E61;
+  background: linear-gradient(135deg, #B39473 0%, #967556 100%);
+  box-shadow: 0 6px 20px rgba(150, 117, 86, 0.45);
 }
 
+.fab-whatsapp:hover {
+  box-shadow: 0 10px 30px rgba(150, 117, 86, 0.55);
+}
+
+/* Call — deeper brown */
 .fab-call {
-  background: var(--gradient-green);
+  background: linear-gradient(135deg, #7A5C42 0%, #3B3029 100%);
+  box-shadow: 0 6px 20px rgba(59, 48, 41, 0.4);
+}
+
+.fab-call:hover {
+  box-shadow: 0 10px 30px rgba(59, 48, 41, 0.5);
 }
 
 /* ===== INGREDIENTS / FEATURES ROW ===== */
@@ -1891,43 +1917,7 @@ img {
 
 
 /* ===== FLOATING ACTION BUTTONS ===== */
-#fab-container {
-  position: fixed;
-  bottom: 100px;
-  right: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 999;
-}
-
-.fab-btn {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.5rem;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.fab-btn:hover {
-  transform: scale(1.1) translateY(-5px);
-  color: white;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-.fab-whatsapp {
-  background-color: #25D366;
-}
-
-.fab-call {
-  background-color: var(--relief-primary-dark);
-}
+/* FAB duplicate removed — defined above */
 
 /* Scroll To Top */
 .scroll-to-top {
