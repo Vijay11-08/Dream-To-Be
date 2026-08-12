@@ -1553,33 +1553,12 @@ img {
   font-size: 0.85rem;
 }
 
-/* ===== SCROLL TO TOP ===== */
-.scroll-to-top {
-  position: fixed;
-  bottom: 100px;
-  right: 30px;
-  width: 45px;
-  height: 45px;
-  background: var(--gradient-green);
-  color: var(--white);
-  border-radius: 50%;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: var(--shadow-md);
-  transition: all 0.3s ease;
-  border: none;
-  z-index: 999;
+/* ===== LOADING BAR KEYFRAME ===== */
+@keyframes loadingBar {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
 }
-
-.scroll-to-top.show {
-  display: flex;
-}
-
-.scroll-to-top:hover {
-  transform: translateY(-3px);
-}
+/* scroll-to-top is defined in the FAB section below */
 
 /* ===== TEAM CARDS ===== */
 .team-card {
@@ -1910,3 +1889,160 @@ img {
   }
 }
 
+
+/* ===== FLOATING ACTION BUTTONS ===== */
+#fab-container {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+
+.fab-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.fab-btn:hover {
+  transform: scale(1.1) translateY(-5px);
+  color: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.fab-whatsapp {
+  background-color: #25D366;
+}
+
+.fab-call {
+  background-color: var(--relief-primary-dark);
+}
+
+/* Scroll To Top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--relief-brown);
+  color: var(--relief-white);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: var(--relief-shadow-sm);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  background-color: var(--relief-primary);
+  transform: translateY(-5px);
+}
+
+/* Chatbot overriding styles to not overlap */
+#chatbot-container {
+  bottom: 30px !important;
+  right: 100px !important; /* Move it to the left of the scroll-to-top and fab buttons */
+}
+#chatbot-toggle {
+  bottom: 30px !important;
+  right: 100px !important;
+}
+
+@media (max-width: 767px) {
+  #fab-container {
+    bottom: 90px;
+    right: 20px;
+  }
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+  }
+  #chatbot-toggle {
+    right: 80px !important;
+    bottom: 20px !important;
+  }
+  #chatbot-container {
+    right: 20px !important;
+    bottom: 80px !important; /* If open, go above buttons */
+  }
+}
+
+/* ===== EXTREME MOBILE OPTIMIZATIONS (360px - 480px) ===== */
+@media (max-width: 480px) {
+  .section-padding { padding: 60px 0; }
+  .section-heading-primary { font-size: 2rem; }
+  .hero-title { font-size: 2.2rem !important; }
+  .service-hero h1 { font-size: 1.8rem !important; }
+  
+  .card-relief {
+    border-radius: 12px;
+  }
+  .card-relief-img-wrap {
+    border-radius: 12px 12px 0 0;
+  }
+  .btn-primary-relief, .btn-secondary-relief {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    width: 100%; /* Full width buttons on small screens */
+  }
+  
+  /* Fix FAB overlap on tiny screens */
+  #fab-container {
+    bottom: 80px;
+    right: 15px;
+  }
+  .fab-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+  .scroll-to-top {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  #chatbot-toggle {
+    right: 70px !important;
+    bottom: 15px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-title { font-size: 1.9rem !important; }
+  .section-heading-primary { font-size: 1.8rem; }
+  .metric-card {
+    padding: 15px 10px;
+  }
+  .metric-icon {
+    width: 40px; height: 40px;
+    font-size: 1.2rem;
+  }
+}
