@@ -79,20 +79,47 @@
         }
     </style>
 
-    <!-- ===== MARQUEE ===== -->
-    <marquee style="
-        background: var(--relief-beige);
-        color: var(--relief-primary-dark);
-        padding: 8px 0;
-        font-weight: 600;
-        font-size: 0.95rem;
-        border-bottom: 1px solid var(--relief-border);
-      ">
-        Welcome to Relief Skin & Cosmetic Clinic! ✨ Our Advanced Treatments:
-        Laser Hair Removal • CO₂ Laser Treatment • Hydra Facial • Q-Switch Nd:YAG
-        Laser • PRP / Mesotherapy • MNRF Treatment ✨ Self Care Starts with Skin
-        Care!
-    </marquee>
+    <!-- ===== ANNOUNCEMENT TICKER ===== -->
+    <div class="relief-ticker" aria-label="Clinic announcements">
+      <div class="ticker-label"><i class="fa-solid fa-star-of-life"></i> &nbsp;Latest</div>
+      <div class="ticker-track-wrap">
+        <div class="ticker-track">
+          <span class="ticker-item">✨ Welcome to Relief Skin &amp; Cosmetic Clinic, Jamnagar</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">⚡ Diode Laser Hair Removal — Permanent, Pain-free &amp; Safe</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">🌟 CO₂ Fractional Laser — Acne Scars &amp; Skin Resurfacing</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">💧 Hydra Facial — Deep Cleanse, Glow &amp; Hydration</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">✨ Q-Switch Nd:YAG Laser — Tattoo Removal &amp; Pigmentation</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">💉 PRP / Mesotherapy — Hair Fall &amp; Scalp Rejuvenation</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">🔥 MNRF Treatment — Skin Tightening &amp; Collagen Boost</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">📞 Call Us: +91 99983 98310 &nbsp;|&nbsp; Mon–Sat: 10AM–2PM &amp; 5PM–8PM</span>
+          <span class="ticker-sep">◆</span>
+          <!-- Duplicate for seamless loop -->
+          <span class="ticker-item">✨ Welcome to Relief Skin &amp; Cosmetic Clinic, Jamnagar</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">⚡ Diode Laser Hair Removal — Permanent, Pain-free &amp; Safe</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">🌟 CO₂ Fractional Laser — Acne Scars &amp; Skin Resurfacing</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">💧 Hydra Facial — Deep Cleanse, Glow &amp; Hydration</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">✨ Q-Switch Nd:YAG Laser — Tattoo Removal &amp; Pigmentation</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">💉 PRP / Mesotherapy — Hair Fall &amp; Scalp Rejuvenation</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">🔥 MNRF Treatment — Skin Tightening &amp; Collagen Boost</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">📞 Call Us: +91 99983 98310 &nbsp;|&nbsp; Mon–Sat: 10AM–2PM &amp; 5PM–8PM</span>
+          <span class="ticker-sep">◆</span>
+        </div>
+      </div>
+    </div>
     <!-- ===== QUICK INFO STRIP ===== -->
     <!-- <section style="background: var(--gradient-green); padding: 22px 0">
       <div class="container">
@@ -197,106 +224,132 @@
                     </div>
                 </div>
                 <div class="col-lg-6 mt-5 mt-lg-0">
-                    <div class="hero-image-wrapper">
-                        <img src="images/hero-banner.png"
-                            alt="Relief Skin & Cosmetic Clinic - Expert skin care in Jamnagar" />
+                    <div class="hero-carousel-wrap">
+                        <div class="hero-carousel" id="heroCarousel">
+                            <img src="images/hero-banner.png" alt="Relief Skin & Cosmetic Clinic - Expert skin care in Jamnagar" class="hero-slide active" />
+                            <img src="images/hero_consultation.png" alt="Expert Consultation at Relief Clinic" class="hero-slide" />
+                            <img src="images/gallery/treatment.png" alt="State of the art treatment rooms" class="hero-slide" />
+                        </div>
                         <div class="hero-image-decoration"></div>
+                        
+                        <div class="hero-dots" id="heroDots"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== FEATURED SERVICES ===== -->
+    <!-- ===== FEATURED SERVICES CAROUSEL ===== -->
     <section class="section-padding" id="services-overview">
         <div class="container">
             <div class="section-title">
                 <span class="section-eyebrow reveal-up">Our Expertise</span>
-                <h2 class="section-heading-primary reveal-up" class="section-heading-primary reveal-up">Advanced Skin
-                    Treatments</h2>
+                <h2 class="section-heading-primary reveal-up">Advanced Skin Treatments</h2>
                 <p class="section-subtitle mx-auto reveal-up">
-                    Backed by state-of-the-art equipment and expert doctors for visible,
-                    lasting results
+                    Backed by state-of-the-art equipment and expert doctors for visible, lasting results
                 </p>
             </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card-relief p-4 text-center h-100 reveal-up">
-                        <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--relief-primary);">
-                            <i class="fa-solid fa-bolt-lightning"></i>
+
+            <!-- Services Carousel -->
+            <div class="services-carousel-wrap reveal-up">
+                <div class="services-carousel" id="servicesCarousel">
+                    <!-- Card 1 -->
+                    <div class="svc-slide">
+                        <div class="svc-card">
+                            <div class="svc-icon-wrap"><i class="fa-solid fa-bolt-lightning"></i></div>
+                            <h4>Diode Laser Hair Removal</h4>
+                            <p>Permanent hair reduction for face &amp; body. Safe, painless &amp; effective for all skin types.</p>
+                            <a href="service-diode-laser.html" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
-                        <h4 class="mb-3">Diode Laser Hair Reduction</h4>
-                        <p class="text-muted">
-                            Permanent hair reduction for face & body, safe for multiple skin
-                            types.
-                        </p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="svc-slide">
+                        <div class="svc-card">
+                            <div class="svc-icon-wrap"><i class="fa-solid fa-sun"></i></div>
+                            <h4>CO₂ Laser Treatment</h4>
+                            <p>Acne scar resurfacing, fine lines, wrinkles &amp; stretch marks with fractional CO₂ technology.</p>
+                            <a href="service-co2-laser.html" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="svc-slide">
+                        <div class="svc-card">
+                            <div class="svc-icon-wrap"><i class="fa-solid fa-droplet"></i></div>
+                            <h4>Hydra Facial</h4>
+                            <p>Deep cleansing, intense hydration, skin brightening &amp; rejuvenation in a single session.</p>
+                            <a href="service-hydra-facial.html" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="svc-slide">
+                        <div class="svc-card">
+                            <div class="svc-icon-wrap"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <h4>Q-Switch Nd:YAG Laser</h4>
+                            <p>Tattoo removal, melasma, pigmentation, freckles &amp; skin brightening with precision laser.</p>
+                            <a href="service-qswitch.html" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="svc-slide">
+                        <div class="svc-card">
+                            <div class="svc-icon-wrap"><i class="fa-solid fa-syringe"></i></div>
+                            <h4>PRP / Mesotherapy</h4>
+                            <p>Hair fall treatment, baldness reversal &amp; scalp rejuvenation using your own growth factors.</p>
+                            <a href="service-prp.html" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="svc-slide">
+                        <div class="svc-card">
+                            <div class="svc-icon-wrap"><i class="fa-solid fa-fire"></i></div>
+                            <h4>MNRF Treatment</h4>
+                            <p>Microneedling RF for acne scars, wrinkle reduction, skin tightening &amp; pore minimisation.</p>
+                            <a href="service-mnrf.html" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="svc-slide">
+                        <div class="svc-card">
+                            <div class="svc-icon-wrap"><i class="fa-solid fa-flask"></i></div>
+                            <h4>Chemical Peel</h4>
+                            <p>Exfoliation-based treatment for dull skin, uneven tone, acne marks &amp; textural improvement.</p>
+                            <a href="service-chemical-peel.html" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="svc-slide">
+                        <div class="svc-card">
+                            <div class="svc-icon-wrap"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <h4>Trichoscopy</h4>
+                            <p>Advanced digital hair &amp; scalp analysis to diagnose hair loss conditions with precision.</p>
+                            <a href="service-trichoscopy.html" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div class="svc-slide">
+                        <div class="svc-card">
+                            <div class="svc-icon-wrap"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                            <h4>RF Cautery</h4>
+                            <p>Precise removal of skin tags, warts, moles &amp; benign growths with RF energy — no scalpel.</p>
+                            <a href="service-rf-cautery.html" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card-relief p-4 text-center h-100 reveal-up" style="transition-delay: 100ms;">
-                        <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--relief-primary);">
-                            <i class="fa-solid fa-sun"></i>
-                        </div>
-                        <h4 class="mb-3">CO₂ Laser Treatment</h4>
-                        <p class="text-muted">
-                            Acne scar treatment, skin resurfacing, fine lines, wrinkles &
-                            stretch marks.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-relief p-4 text-center h-100 reveal-up" style="transition-delay: 200ms;">
-                        <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--relief-primary);">
-                            <i class="fa-solid fa-droplet"></i>
-                        </div>
-                        <h4 class="mb-3">Hydra Facial</h4>
-                        <p class="text-muted">
-                            Deep cleansing, hydration, glowing skin & rejuvenation.
-                        </p>
-                    </div>
-                </div>
+
+                <!-- Carousel Controls -->
+                <button class="svc-arrow svc-prev" id="svcPrev" aria-label="Previous service">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="svc-arrow svc-next" id="svcNext" aria-label="Next service">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
-            <div class="row g-4 mt-2">
-                <div class="col-md-4">
-                    <div class="card-relief p-4 text-center h-100 reveal-up">
-                        <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--relief-primary);">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        </div>
-                        <h4 class="mb-3">Q-Switch Nd:YAG Laser</h4>
-                        <p class="text-muted">
-                            Tattoo removal, pigmentation, melasma, freckles & skin
-                            brightening.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-relief p-4 text-center h-100 reveal-up" style="transition-delay: 100ms;">
-                        <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--relief-primary);">
-                            <i class="fa-solid fa-syringe"></i>
-                        </div>
-                        <h4 class="mb-3">PRP / Mesotherapy</h4>
-                        <p class="text-muted">
-                            Hair fall treatment, baldness, hair growth stimulation & scalp
-                            rejuvenation.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-relief p-4 text-center h-100 reveal-up" style="transition-delay: 200ms;">
-                        <div class="service-icon mb-3" style="font-size: 2.5rem; color: var(--relief-primary);">
-                            <i class="fa-solid fa-fire"></i>
-                        </div>
-                        <h4 class="mb-3">MNRF Treatment</h4>
-                        <p class="text-muted">
-                            Acne scar, wrinkle reduction, skin tightening, collagen
-                            stimulation & pore reduction.
-                        </p>
-                    </div>
-                </div>
-            </div>
+
+            <!-- Carousel Dots -->
+            <div class="svc-dots" id="svcDots"></div>
+
             <div class="text-center mt-5 reveal-up">
-                <a href="services.html" class="btn-primary-relief">View All Services <i
-                        class="fa-solid fa-arrow-right"></i></a>
+                <a href="services.html" class="btn-primary-relief">View All Services <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -619,22 +672,225 @@
       </div>
     </section> -->
 
+    <!-- ===== CLINIC GALLERY CAROUSEL ===== -->
+    <section class="section-padding bg-cream" id="clinic-gallery">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-eyebrow reveal-up">Our Facilities</span>
+                <h2 class="section-heading-primary reveal-up">Experience Luxury &amp; Care</h2>
+                <p class="section-subtitle mx-auto reveal-up">
+                    Step into a world of advanced aesthetic dermatology with our state-of-the-art clinic infrastructure
+                </p>
+            </div>
+
+            <div class="gallery-carousel-wrap reveal-up">
+                <div class="gallery-track" id="galleryTrack">
+                    <div class="gallery-slide">
+                        <div class="gallery-card">
+                            <img src="images/gallery/reception.png" alt="Clinic Reception" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h5>Premium Reception</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-card">
+                            <img src="images/gallery/treatment.png" alt="Treatment Room" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h5>Pristine Treatment Rooms</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-card">
+                            <img src="images/gallery/laser.png" alt="Advanced Laser Technology" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h5>Advanced Laser Technology</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-card">
+                            <img src="images/gallery/products.png" alt="Skincare Products" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h5>Premium Skincare Collection</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button class="gallery-arrow gallery-prev" id="galleryPrev" aria-label="Previous image">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="gallery-arrow gallery-next" id="galleryNext" aria-label="Next image">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Dots -->
+            <div class="gallery-dots" id="galleryDots"></div>
+            
+            <div class="text-center mt-5 reveal-up">
+                <a href="gallery.html" class="btn-secondary-relief">View Full Gallery <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS CAROUSEL ===== -->
+    <section class="section-padding testimonials-section" id="testimonials-home">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-eyebrow reveal-up">Happy Patients</span>
+                <h2 class="section-heading-primary reveal-up">What Our Patients Say</h2>
+                <p class="section-subtitle mx-auto reveal-up">
+                    Real stories from real people — 5000+ patients trust Relief Skin &amp; Cosmetic Clinic
+                </p>
+            </div>
+
+            <div class="testi-carousel-wrap reveal-up">
+                <!-- Testimonial track -->
+                <div class="testi-track" id="testiTrack">
+
+                    <div class="testi-slide">
+                        <div class="testi-card">
+                            <div class="testi-quote"><i class="fa-solid fa-quote-left"></i></div>
+                            <div class="testi-stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testi-text">"The laser hair removal sessions were completely pain-free and the results are permanent! Dr. Sagar explained everything in detail. Best clinic in Jamnagar without a doubt."</p>
+                            <div class="testi-author">
+                                <div class="testi-avatar">NP</div>
+                                <div>
+                                    <h6>Nidhi Patel</h6>
+                                    <small>Laser Hair Removal</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testi-slide">
+                        <div class="testi-card">
+                            <div class="testi-quote"><i class="fa-solid fa-quote-left"></i></div>
+                            <div class="testi-stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testi-text">"My acne scars troubled me for years. After just 3 CO₂ laser sessions at Relief Clinic, my skin has completely transformed. Dr. Sagar is truly a gold medalist — his expertise shows!"</p>
+                            <div class="testi-author">
+                                <div class="testi-avatar">RD</div>
+                                <div>
+                                    <h6>Rahul Desai</h6>
+                                    <small>CO₂ Laser Treatment</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testi-slide">
+                        <div class="testi-card">
+                            <div class="testi-quote"><i class="fa-solid fa-quote-left"></i></div>
+                            <div class="testi-stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testi-text">"Hydra Facial by Dr. Diksha was absolutely amazing! My skin felt like silk and looked glowing for weeks. The staff is so warm and welcoming. Highly recommend!"</p>
+                            <div class="testi-author">
+                                <div class="testi-avatar">SK</div>
+                                <div>
+                                    <h6>Sonal Kakadiya</h6>
+                                    <small>Hydra Facial</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testi-slide">
+                        <div class="testi-card">
+                            <div class="testi-quote"><i class="fa-solid fa-quote-left"></i></div>
+                            <div class="testi-stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testi-text">"PRP treatment for hair loss was a game changer for me. I was losing hair rapidly but after the sessions my hair is noticeably thicker and healthier. Thank you Relief Clinic!"</p>
+                            <div class="testi-author">
+                                <div class="testi-avatar">MV</div>
+                                <div>
+                                    <h6>Manish Vora</h6>
+                                    <small>PRP / Mesotherapy</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testi-slide">
+                        <div class="testi-card">
+                            <div class="testi-quote"><i class="fa-solid fa-quote-left"></i></div>
+                            <div class="testi-stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <p class="testi-text">"The Q-Switch laser removed my old tattoo beautifully. No scarring, very professional procedure. I'm so happy I chose Relief Skin Clinic — truly state-of-the-art."</p>
+                            <div class="testi-author">
+                                <div class="testi-avatar">AJ</div>
+                                <div>
+                                    <h6>Aryan Joshi</h6>
+                                    <small>Q-Switch Laser</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testi-slide">
+                        <div class="testi-card">
+                            <div class="testi-quote"><i class="fa-solid fa-quote-left"></i></div>
+                            <div class="testi-stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testi-text">"MNRF treatment for my open pores and acne scars was incredible. After the sessions, my skin is tighter and much smoother. The clinic is hygienic, modern, and very professional."</p>
+                            <div class="testi-author">
+                                <div class="testi-avatar">PK</div>
+                                <div>
+                                    <h6>Priya Kapoor</h6>
+                                    <small>MNRF Treatment</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controls -->
+                <button class="testi-arrow testi-prev" id="testiPrev" aria-label="Previous testimonial">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="testi-arrow testi-next" id="testiNext" aria-label="Next testimonial">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Dots -->
+            <div class="testi-dots" id="testiDots"></div>
+
+            <div class="text-center mt-5 reveal-up">
+                <a href="testimonials.html" class="btn-secondary-relief">Read More Reviews <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== FOOTER ===== -->
     <footer class="footer" id="footer">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
                     <div class="footer-logo-wrap">
-                        <img src="images/logo/relief-logo-a.png" alt="Relief Skin & Cosmetic Clinic" />
+                        <img src="images/logo/relief-logo-a.png" alt="Relief Skin &amp; Cosmetic Clinic" />
                     </div>
                     <p class="footer-desc">
                         "Self Care Starts with Skin Care" — Your trusted destination for
-                        advanced dermatology & aesthetic treatments in Jamnagar.
+                        advanced dermatology &amp; aesthetic treatments in Jamnagar.
                     </p>
                     <div class="d-flex gap-3 mt-4 social-links">
-                        <a href="#"><i class="fa-brands fa-facebook fs-5"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram fs-5"></i></a>
-                        <a href="mailto:reliefskinclinic@gmail.com"><i class="fa-solid fa-envelope fs-5"></i></a>
+                        <a href="https://www.facebook.com/relief_skin_clinic/" target="_blank" rel="noopener" title="Facebook"><i class="fa-brands fa-facebook fs-5"></i></a>
+                        <a href="https://www.instagram.com/relief_skin_clinic/" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram fs-5"></i></a>
+                        <a href="https://www.youtube.com/@ReliefSkinCosmeticClinic" target="_blank" rel="noopener" title="YouTube"><i class="fa-brands fa-youtube fs-5"></i></a>
+                        <a href="mailto:reliefskinclinic@gmail.com" title="Gmail"><i class="fa-solid fa-envelope fs-5"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 offset-lg-1">
@@ -667,19 +923,19 @@
                         <li class="mb-3">
                             <i class="fa-solid fa-location-dot me-2" style="color: var(--relief-primary-dark)"></i>217,
                             Central Point, 2nd Floor, Above Digjam Show Room, Summair
-                            Club Road, S.T. Road, Jamnagar
+                            Club Road, S.T. Road, Jamnagar – 361006
                         </li>
                         <li class="mb-3">
                             <i class="fa-solid fa-phone me-2" style="color: var(--relief-primary-dark)"></i>+91 99983
                             98310
                         </li>
                         <li class="mb-3">
-                            <i class="fa-solid fa-phone me-2" style="color: var(--relief-primary-dark)"></i>0288 –
-                            2565038
+                            <i class="fa-solid fa-envelope me-2"
+                                style="color: var(--relief-primary-dark)"></i>reliefskinclinic@gmail.com
                         </li>
                         <li class="mb-3">
                             <i class="fa-solid fa-envelope me-2"
-                                style="color: var(--relief-primary-dark)"></i>reliefskinclinic@gmail.com
+                                style="color: var(--relief-primary-dark)"></i>info@reliefskinclinic.com
                         </li>
                         <li class="mb-3">
                             <i class="fa-solid fa-clock me-2" style="color: var(--relief-primary-dark)"></i>Mon–Sat:

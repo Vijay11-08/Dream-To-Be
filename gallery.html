@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -25,21 +25,47 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-        <!-- ===== MARQUEE ===== -->
-    <marquee
-      style="
-        background: var(--relief-beige);
-        color: var(--relief-primary-dark);
-        padding: 8px 0;
-        font-weight: 600;
-        font-size: 0.95rem;
-        border-bottom: 1px solid var(--relief-border);
-      "
-    >
-      Welcome to Relief Skin &amp; Cosmetic Clinic! ✨ Our Advanced Treatments:
-      Laser Hair Removal &bull; CO&#8322; Laser Treatment &bull; Hydra Facial &bull; Q-Switch Nd:YAG
-      Laser &bull; PRP / Mesotherapy &bull; MNRF Treatment ✨ Self Care Starts with Skin Care!
-    </marquee>
+    <!-- ===== ANNOUNCEMENT TICKER ===== -->
+    <div class="relief-ticker" aria-label="Clinic announcements">
+      <div class="ticker-label"><i class="fa-solid fa-star-of-life"></i> &nbsp;Latest</div>
+      <div class="ticker-track-wrap">
+        <div class="ticker-track">
+          <span class="ticker-item">✨ Welcome to Relief Skin &amp; Cosmetic Clinic, Jamnagar</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">⚡ Diode Laser Hair Removal — Permanent, Pain-free &amp; Safe</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">🌟 CO₂ Fractional Laser — Acne Scars &amp; Skin Resurfacing</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">💧 Hydra Facial — Deep Cleanse, Glow &amp; Hydration</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">✨ Q-Switch Nd:YAG Laser — Tattoo Removal &amp; Pigmentation</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">💉 PRP / Mesotherapy — Hair Fall &amp; Scalp Rejuvenation</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">🔥 MNRF Treatment — Skin Tightening &amp; Collagen Boost</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">📞 Call Us: +91 99983 98310 &nbsp;|&nbsp; Mon–Sat: 10AM–2PM &amp; 5PM–8PM</span>
+          <span class="ticker-sep">◆</span>
+          <!-- Duplicate set for seamless loop -->
+          <span class="ticker-item">✨ Welcome to Relief Skin &amp; Cosmetic Clinic, Jamnagar</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">⚡ Diode Laser Hair Removal — Permanent, Pain-free &amp; Safe</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">🌟 CO₂ Fractional Laser — Acne Scars &amp; Skin Resurfacing</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">💧 Hydra Facial — Deep Cleanse, Glow &amp; Hydration</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">✨ Q-Switch Nd:YAG Laser — Tattoo Removal &amp; Pigmentation</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">💉 PRP / Mesotherapy — Hair Fall &amp; Scalp Rejuvenation</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">🔥 MNRF Treatment — Skin Tightening &amp; Collagen Boost</span>
+          <span class="ticker-sep">◆</span>
+          <span class="ticker-item">📞 Call Us: +91 99983 98310 &nbsp;|&nbsp; Mon–Sat: 10AM–2PM &amp; 5PM–8PM</span>
+          <span class="ticker-sep">◆</span>
+        </div>
+      </div>
+    </div>
 
     <nav
       class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top"
@@ -301,10 +327,11 @@
             <p class="footer-desc">
               "Self Care Starts with Skin Care" — Your trusted destination for advanced dermatology & aesthetic treatments in Jamnagar.
             </p>
-            <div class="d-flex gap-3 mt-4 social-links">
-              <a href="#"><i class="fa-brands fa-facebook fs-5"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram fs-5"></i></a>
-              <a href="mailto:reliefskinclinic@gmail.com"><i class="fa-solid fa-envelope fs-5"></i></a>
+                        <div class="d-flex gap-3 mt-4 social-links">
+                <a href="https://www.facebook.com/relief_skin_clinic/" target="_blank" rel="noopener" title="Facebook"><i class="fa-brands fa-facebook fs-5"></i></a>
+                <a href="https://www.instagram.com/relief_skin_clinic/" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram fs-5"></i></a>
+                <a href="https://www.youtube.com/@ReliefSkinCosmeticClinic" target="_blank" rel="noopener" title="YouTube"><i class="fa-brands fa-youtube fs-5"></i></a>
+                <a href="mailto:reliefskinclinic@gmail.com" title="Gmail"><i class="fa-solid fa-envelope fs-5"></i></a>
             </div>
           </div>
           <div class="col-lg-2 offset-lg-1">
@@ -331,17 +358,17 @@
             <h5 class="mb-4">Contact Info</h5>
             <ul class="list-unstyled">
               <li class="mb-3">
-                <i class="fa-solid fa-location-dot me-2" style="color: var(--relief-primary-dark)"></i>217, Central Point, 2nd Floor, Above Digjam Show Room, Summair Club Road, S.T. Road, Jamnagar
+                <i class="fa-solid fa-location-dot me-2" style="color: var(--relief-primary-dark)"></i>217, Central Point, 2nd Floor, Above Digjam Show Room, Summair Club Road, S.T. Road, Jamnagar – 361006
               </li>
               <li class="mb-3">
                 <i class="fa-solid fa-phone me-2" style="color: var(--relief-primary-dark)"></i>+91 99983 98310
               </li>
               <li class="mb-3">
-                <i class="fa-solid fa-phone me-2" style="color: var(--relief-primary-dark)"></i>0288 – 2565038
-              </li>
-              <li class="mb-3">
                 <i class="fa-solid fa-envelope me-2" style="color: var(--relief-primary-dark)"></i>reliefskinclinic@gmail.com
               </li>
+                        <li class="mb-3">
+                            <i class="fa-solid fa-envelope me-2" style="color: var(--relief-primary-dark)"></i>info@reliefskinclinic.com
+                        </li>
               <li class="mb-3">
                 <i class="fa-solid fa-clock me-2" style="color: var(--relief-primary-dark)"></i>Mon–Sat: 10:00 AM – 2:00 PM & 5:00 PM – 8:00 PM
               </li>
